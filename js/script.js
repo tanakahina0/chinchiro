@@ -1,7 +1,3 @@
-// プレイヤーを先に入力して、終わったら親を選択できるようにする
-// 履歴は、1回戦目、2回戦目などそれぞれで確認できるようにする
-// 全員が親になったら、一覧の結果発表が見れる
-
 let rollCount = 0;
 let history = [];
 let users = [];
@@ -109,6 +105,6 @@ function addToHistory(user, result, dice, isParent) {
 }
 
 function audio() {
-    document.getElementById('btn_audio').currentTime = 0; //連続クリックに対応
-    document.getElementById('btn_audio').play(); //クリックしたら音を再生
+    document.getElementById('btn_audio').currentTime = 0;
+    document.getElementById('btn_audio').play();
 }
