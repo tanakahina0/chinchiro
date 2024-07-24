@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チンチロリンゲーム</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container" id="gameContainer">
+        <h1>チンチロリンゲーム</h1>
+        <div id="userInputContainer">
+            <h2>プレイヤー名を入力してください</h2>
+            <input type="text" id="userNameInput" placeholder="プレイヤー名">
+            <label>
+                <input type="checkbox" id="isParentCheckbox"> 親
+            </label>
+            <button id="addUserButton">追加</button>
+            <button id="startGameButton" disabled>ゲーム開始</button>
+        </div>
+        <div id="gameInterface" style="display: none;">
+            <div class="dice-container">
+                <div class="dice" id="dice1">-</div>
+                <div class="dice" id="dice2">-</div>
+                <div class="dice" id="dice3">-</div>
+            </div>
+            <div class="buttons">
+                <button id="rollButton" class="btn" onclick="audio()">サイコロを振る</button>
+                <audio id="btn_audio">
+                    <source src="./チンチロリン.mp3" type="audio/mp3">
+                </audio>
+                <button id="nextUserButton" disabled>次のプレイヤーへ代わる</button>
+            </div>
+            <div id="result">結果: -</div>
+            <h2>履歴</h2>
+            <div id="history">履歴はありません</div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
